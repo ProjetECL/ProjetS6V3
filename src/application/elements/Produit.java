@@ -20,5 +20,8 @@ public class Produit extends Element{
         return this.nom;
     }
     
+    public String getCode() {
+    	return this.code;
+    }
 }
 

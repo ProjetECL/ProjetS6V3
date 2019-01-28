@@ -19,4 +19,5 @@ public abstract class Element implements Liquide, Solide{
     
     public abstract String toString();
     public abstract String getNom();
+    public abstract String getCode();
 }
