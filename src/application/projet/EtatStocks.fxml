@@ -7,8 +7,8 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -37,20 +37,20 @@
             <Insets left="30.0" />
          </opaqueInsets>
          <BorderPane.margin>
-            <Insets />
+            <Insets left="70.0" />
          </BorderPane.margin>
       </TableView>
    </center>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button id="AjouterStocks" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Ajouter">
-               <HBox.margin>
+            <Button id="AjouterStocks" layoutX="225.0" layoutY="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Ajouter">
+               <opaqueInsets>
                   <Insets />
-               </HBox.margin>
+               </opaqueInsets>
             </Button>
-            <Button maxWidth="101.0" minHeight="0.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Supprimer" />
+            <Button layoutX="350.0" layoutY="35.0" maxWidth="101.0" minHeight="0.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Supprimer" />
          </children>
-      </HBox>
+      </Pane>
    </bottom>
 </BorderPane>
