@@ -5,8 +5,12 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class Accueil_Controller implements Initializable{
 	
@@ -15,6 +19,15 @@ public class Accueil_Controller implements Initializable{
 	
 	public void handle(ActionEvent actionEvent) {
 		System.out.println("Salut le monde!");
+		Stage stage = new Stage();
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("/application_projet/EtatStocks.fxml"));
+			stage.setTitle("Etat des stocks");
+			stage.setScene(new Scene(root, 400, 400));
+			stage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 		@Override
