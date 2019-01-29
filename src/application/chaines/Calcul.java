@@ -1,5 +1,5 @@
 package application.chaines;
-//coucou
+
 
 import application.elements.*;
 import application.fichiers.CSV;
@@ -17,9 +17,9 @@ import java.util.*;
  */
 public class Calcul {
     /**
-     * @param liste de tous les éléments de la HashMap
-     * @param e l'élément dont on cherche à déterminer son stock
-     * @return le stock de cet élément de la chaîne de production
+     * @param liste de tous les ï¿½lï¿½ments de la HashMap
+     * @param e l'ï¿½lï¿½ment dont on cherche ï¿½ dï¿½terminer son stock
+     * @return le stock de cet ï¿½lï¿½ment de la chaï¿½ne de production
      */
     public int defStock(HashMap<String, Element> liste, Element e){
         Iterator i = liste.keySet().iterator();
@@ -33,9 +33,9 @@ public class Calcul {
         return total;
     }
     /**
-     * @param liste de tous les éléments d'une liste de noms d'éléments
-     * @param nomElement (nom de l'élément) dont on cherche à déterminer son stock
-     * @return le stock de cet élément
+     * @param liste de tous les ï¿½lï¿½ments d'une liste de noms d'ï¿½lï¿½ments
+     * @param nomElement (nom de l'ï¿½lï¿½ment) dont on cherche ï¿½ dï¿½terminer son stock
+     * @return le stock de cet ï¿½lï¿½ment
      */
     public int defStock(ArrayList<String> liste, String nomElement){
         int total=0;
@@ -48,13 +48,13 @@ public class Calcul {
         return total;
     }
     /**
-     * Méthode qui permet de stocker au même endroit les éléments et le nombre 
-     * en stock selon les données du fichier CSV
+     * Mï¿½thode qui permet de stocker au mï¿½me endroit les ï¿½lï¿½ments et le nombre 
+     * en stock selon les donnï¿½es du fichier CSV
      * @throws IOException 
      */
     public void resumeStock() throws IOException{
         /**
-         * Stockage de chaque élément par leur nom dans un tableau dynamique
+         * Stockage de chaque ï¿½lï¿½ment par leur nom dans un tableau dynamique
          */
         ArrayList<String> tableau = new ArrayList();
         BufferedReader reader = null;
@@ -71,7 +71,7 @@ public class Calcul {
                 reader.close();
         }
         /**
-         * Parcours de ce tableau dynamique pour définir les récurrences de noms
+         * Parcours de ce tableau dynamique pour dï¿½finir les rï¿½currences de noms
          * Stockage dans une HashMap
          */
         HashMap<String, Integer> map = new HashMap();

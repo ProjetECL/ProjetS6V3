@@ -21,4 +21,7 @@ public class MatierePremiere extends Element{
         return this.nom;
     }
     
+    public String getCode() {
+    	return this.code;
+    }
 }
