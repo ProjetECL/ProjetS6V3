@@ -17,7 +17,7 @@ import javafx.scene.*;
 
 import javafx.stage.Stage;
 
-public class Accueil_Controller implements Initializable{
+public class AccueilController implements Initializable{
 
 	@FXML
 	private Button EtatStocks;
