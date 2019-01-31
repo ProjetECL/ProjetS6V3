@@ -77,17 +77,16 @@ public class ChProduction {
     
     public static List<Element> csvVersChaines() {
     	
-    	List<ChProduction> chaines = new ArrayList<ChProduction>();
+    	List<Element> chaines = new ArrayList<Element>();
     	
 		CSVV.lecture("chaines.csv").forEach(csvRecord -> {
 			
 			chaines.add(new Element(csvRecord.get("code"), Integer.parseInt(csvRecord.get("quantite")), csvRecord.get("nom"), csvRecord.get("unite"), Integer.parseInt(csvRecord.get("achat")), Integer.parseInt(csvRecord.get("vente"))));
 		});
 		
-		System.out.println(elements.toString());
+		System.out.println(chaines.toString());
     		
-		return elements;
+		return chaines;
     }
-    
 }
 
