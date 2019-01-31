@@ -2,6 +2,8 @@ package application.chaines;
 
 
 import application.elements.*;
+import application.fichiers.CSVV;
+
 import java.io.*;
 import java.lang.*;
 import java.util.*;
@@ -72,5 +74,20 @@ public class ChProduction {
     	}
     	return chaine;
     }
+    
+    public static List<Element> csvVersChaines() {
+    	
+    	List<ChProduction> chaines = new ArrayList<ChProduction>();
+    	
+		CSVV.lecture("chaines.csv").forEach(csvRecord -> {
+			
+			chaines.add(new Element(csvRecord.get("code"), Integer.parseInt(csvRecord.get("quantite")), csvRecord.get("nom"), csvRecord.get("unite"), Integer.parseInt(csvRecord.get("achat")), Integer.parseInt(csvRecord.get("vente"))));
+		});
+		
+		System.out.println(elements.toString());
+    		
+		return elements;
+    }
+    
 }
 

@@ -60,7 +60,7 @@ public class CSVV {
 		return printer;
 	}
 	
-	public static void main(String[] args) {
+//	public static void main(String[] args) {
 //	
 //		CSVV.lecture("elements.csv").forEach(csvRecord -> {
 //			

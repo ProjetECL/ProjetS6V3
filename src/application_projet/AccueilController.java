@@ -4,6 +4,7 @@ import java.awt.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,20 +20,32 @@ import javafx.stage.Stage;
 
 public class AccueilController implements Initializable{
 
-	@FXML
-	private Button EtatStocks;
+	@FXML private Projet main= new Projet();
 	
-		public void handle(ActionEvent actionEvent) {
-			Stage stage = new Stage();
-			try {
-				Parent root = FXMLLoader.load(getClass().getResource("/application_projet/EtatStocks.fxml"));
-				stage.setTitle("Etat des stocks");
-				stage.setScene(new Scene(root,400,400));
-				stage.show();
+	@FXML
+	private Button ListeChaineProduction;
+	@FXML 
+	private javafx.scene.control.Button closeButton;
+	@FXML
+	public void handle(ActionEvent actionEvent) {
+			
+			try {			
+				Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+				Parent elementPageParent = FXMLLoader.load(getClass().getResource("/application_projet/EtatStocks.fxml"));
+				Scene elementPageScene = new Scene(elementPageParent);
+				Stage sceneActuel = stage;
+				sceneActuel.setScene(elementPageScene);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
 	}
+			
+	@FXML
+	 private void gestionButonFermer(ActionEvent event) {
+		    	 Stage stage = (Stage) closeButton.getScene().getWindow(); 
+		    	   
+		    	 stage.close(); 
+	 }
 
 		@Override
 	public void initialize(URL location, ResourceBundle resources) {

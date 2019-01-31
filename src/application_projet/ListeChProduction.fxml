@@ -6,7 +6,7 @@
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="374.0" prefWidth="449.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application_projet.EtatStocksController">
+<AnchorPane id="AnchorPane" prefHeight="374.0" prefWidth="449.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="application_projet.ListeChProdController">
     <children>
       <TableView fx:id="table" editable="true" layoutX="75.0" layoutY="39.0" prefHeight="264.0" prefWidth="308.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="39.0">
         <columns>
@@ -15,16 +15,12 @@
       		</TableColumn>
       
           	<TableColumn minWidth="0.0" prefWidth="119.0" text="Nom">
-                     <cellValueFactory><PropertyValueFactory property="nom" /></cellValueFactory>
-                    
-          </TableColumn>
-          <TableColumn minWidth="0.0" prefWidth="99.0" text="Quantité">
-                     <cellValueFactory><PropertyValueFactory property="quantite" /></cellValueFactory>
-          </TableColumn>
+                     <cellValueFactory><PropertyValueFactory property="nom" /></cellValueFactory>        
+          	</TableColumn>
         </columns>
       </TableView>
      <Button fx:id="RetourAccueil" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onAction="#gestionButonRetour" text="Retour" />
-      <Button fx:id="AjouterStock" layoutX="84.0" layoutY="341.0" mnemonicParsing="false" text="Ajouter" />
-      <Button fx:id="SupprimerStock" layoutX="286.0" layoutY="341.0" mnemonicParsing="false" text="Supprimer" />
+      <Button fx:id="AjouterChaine" layoutX="84.0" layoutY="341.0" mnemonicParsing="false" text="Ajouter" />
+      <Button fx:id="SupprimerChaine" layoutX="286.0" layoutY="341.0" mnemonicParsing="false" text="Supprimer" />
     </children>
 </AnchorPane>

@@ -3,7 +3,7 @@ package application_projet;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.elements.Element;
+import application.chaines.ChProduction;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,39 +21,36 @@ import javafx.stage.Stage;
 
  
  
-public class EtatStocksController implements Initializable {
+public class ListeChProdController implements Initializable {
  
-    private ObservableList<Element> PersonData = FXCollections.observableArrayList();
+    private ObservableList<ChProduction> ChaineData = FXCollections.observableArrayList();
    /* @FXML
     private Button button;*/
     @FXML
-    private TableView<Element> table;
+    private TableView<ChProduction> table;
   //  private TableColumn<Object, Integer> Index;
  
     @FXML
 	 private void gestionButonRetour(ActionEvent actionEvent) {
     	try {			
 			Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-			Parent elementPageParent = FXMLLoader.load(getClass().getResource("/application_projet/Accueil.fxml"));
-			Scene elementPageScene = new Scene(elementPageParent);
+			Parent chainePageParent = FXMLLoader.load(getClass().getResource("/application_projet/Accueil.fxml"));
+			Scene chainePageScene = new Scene(chainePageParent);
 			Stage sceneActuel = stage;
-			sceneActuel.setScene(elementPageScene);
+			sceneActuel.setScene(chainePageScene);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	 }
     
- /*  public void createColumnManually(int n) {
-	   TableColumn <Element, String> nivActivation = new TableColumn <>("Niveau d'activation");
-	   table.getColumns().add(n, nivActivation);
-   }*/
+
  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-       PersonData.addAll(Element.csvVersElement());
+       ChaineData.addAll(ChProduction.csvVersChaines());
  
-        table.getItems().addAll(PersonData);
+        table.getItems().addAll(ChaineData);
        // table.setEditable(true);
        
     }    
