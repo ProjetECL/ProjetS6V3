@@ -10,7 +10,7 @@ import javafx.beans.property.StringProperty;
 public class Element {
 
    public String code;
-   public int quantite;
+   public float quantite;
    protected String nom;
    protected String unite;
    protected int prixAchat;
@@ -25,7 +25,7 @@ public class Element {
        this.prixVente = 0;
    }
 
-   public Element(String code, int quantite, String nom, String unite, int prixAchat, int prixVente) {
+   public Element(String code, float quantite, String nom, String unite, int prixAchat, int prixVente) {
 	   
 	   this.code = code;
 	   this.quantite = quantite;
@@ -43,7 +43,7 @@ public class Element {
 		this.code = code;
 	}
 	
-	public int getQuantite() {
+	public float getQuantite() {
 		return quantite;
 	}
 	
