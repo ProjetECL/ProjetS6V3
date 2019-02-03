@@ -70,7 +70,7 @@ public class AssociationChProdElement {
         List<AssociationChProdElement> list = new ArrayList<>();
 
         CSVV.lecture(csvPath).forEach(csvRecord -> {
-            Log.d(TAG,csvRecord.toMap().toString());
+           // Log.d(TAG,csvRecord.toMap().toString());
             int qte = Integer.parseInt(csvRecord.get("qte"));
             TypeElement type = TypeElement.valueOf(csvRecord.get("type"));
             list.add(new AssociationChProdElement(csvRecord.get("codeCh"),csvRecord.get("codeEle"),

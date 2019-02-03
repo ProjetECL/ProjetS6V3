@@ -2,6 +2,7 @@ package application_projet;
 
 import java.awt.Button;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -17,6 +18,7 @@ import javafx.scene.Scene;
 
 import javafx.scene.*;
 
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class AccueilController implements Initializable{
@@ -27,6 +29,9 @@ public class AccueilController implements Initializable{
 	private Button ListeChaineProduction;
 	@FXML 
 	private javafx.scene.control.Button closeButton;
+	Pane paneView1;
+	private Object ListeChProdController;
+
 	@FXML
 	public void handle(ActionEvent actionEvent) {
 			

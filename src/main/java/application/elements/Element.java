@@ -97,8 +97,7 @@ public class Element {
 			
 			elements.add(new Element(csvRecord.get("code"), Integer.parseInt(csvRecord.get("quantite")), csvRecord.get("nom"), csvRecord.get("unite"), Integer.parseInt(csvRecord.get("achat")), Integer.parseInt(csvRecord.get("vente"))));
 		});
-		
-		System.out.println(elements.toString());
+
     		
 		return elements;
     }

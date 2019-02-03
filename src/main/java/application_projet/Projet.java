@@ -40,7 +40,7 @@ public class Projet extends Application {
 
 	public static void main(String[] args) {
 
-		Log.d(TAG,ChProduction.csvVersChainesTest().toString());
+		//Log.d(TAG,ChProduction.csvVersChainesT().toString());
 		launch(args);
 	}
 }

@@ -1,5 +1,6 @@
 package application_projet;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,13 +29,14 @@ public class EtatStocksController implements Initializable {
     private Button button;*/
     @FXML
     private TableView<Element> table;
-  //  private TableColumn<Object, Integer> Index;
+
  
     @FXML
 	 private void gestionButonRetour(ActionEvent actionEvent) {
     	try {			
 			Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-			Parent elementPageParent = FXMLLoader.load(getClass().getResource("/application_projet/Accueil.fxml"));
+            URL url = new File("src/main/java/application_projet/Accueil.fxml").toURL();
+			Parent elementPageParent = FXMLLoader.load(url);
 			Scene elementPageScene = new Scene(elementPageParent);
 			Stage sceneActuel = stage;
 			sceneActuel.setScene(elementPageScene);

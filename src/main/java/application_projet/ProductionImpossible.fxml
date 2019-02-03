@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application_projet.ProductionImpossibleController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Label layoutX="130.0" layoutY="105.0" text="La production est impossible!">
+        <font>
+            <Font size="24.0" />
+        </font></Label>
+    <Button fx:id="RetourAccueil" layoutX="198.0" layoutY="168.0" mnemonicParsing="false" onAction="#gestionButonRetour" prefHeight="46.0" prefWidth="193.0" text="Retour Accueil" />
+</AnchorPane>
+
+

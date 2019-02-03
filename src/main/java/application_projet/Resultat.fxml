@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application_projet.ResultatController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+    <TableView fx:id="table" editable="true" layoutX="75.0" layoutY="39.0" prefHeight="264.0" prefWidth="308.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="39.0">
+        <columns>
+            <TableColumn prefWidth="89.0" text="Code">
+                <cellValueFactory><PropertyValueFactory property="code" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="119.0" text="Nom">
+                <cellValueFactory><PropertyValueFactory property="nom" /></cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="99.0" text="Quantité">
+                <cellValueFactory><PropertyValueFactory property="quantite" /></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+        <Label fx:id="Efficatite"  layoutX="50" layoutY="341"
+        <Button fx:id="RetourAccueil" layoutX="2.0" layoutY="1.0" mnemonicParsing="false" onAction="#gestionButonRetour" text="Retour" />
+        <Button fx:id="Exporter" layoutX="84.0" layoutY="341.0" mnemonicParsing="false" text="Exporter" />
+    </children>
+</AnchorPane>

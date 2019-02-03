@@ -4,6 +4,7 @@ package application.chaines;
 import application.elements.*;
 import application.fichiers.CSV;
 import application_projet.model.AssociationChProdElement;
+import com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl;
 import javafx.collections.ObservableList;
 
 import static application.fichiers.CSV.SEP;
@@ -21,7 +22,7 @@ import java.util.function.Consumer;
  */
 public class Calcul {
 
-    private List<ChProduction> chaines;
+    private List<ChProduction> chaines = ChProduction.csvVersChainesTest() ;
     private HashMap<String,Element> elements;
 
     /**
@@ -37,11 +38,15 @@ public class Calcul {
      * @throws Exception
      */
     public List<Element> evaluer()throws Exception{
-        for(Element element : Element.csvVersElement()){
-            elements.put(element.getCode(),element);
+        Element element;
+        for (Iterator iter =  Element.csvVersElement().iterator(); iter.hasNext();){
+           System.out.println(iter.next());
+           element = (Element) iter.next();
+           this.elements.put(element.getCode(),element);
         }
-        for(ChProduction chaine : chaines){
-            this.evaluerChaine(chaine);
+
+        for(Iterator iter = chaines.iterator();iter.hasNext();){
+            this.evaluerChaine((ChProduction)iter.next());
         }
         return (List)this.elements.values();
     }
@@ -92,6 +97,19 @@ public class Calcul {
             }
         }
         return efficacite;
+    }
+
+    public static void main(String[] args){
+        try {
+            Calcul calcul = new Calcul();
+            calcul.chaines.get(0).setNiveau(0);
+            calcul.chaines.get(1).setNiveau(0);
+            calcul.chaines.get(2).setNiveau(0);
+            calcul.evaluer();
+        } catch (Exception e) {
+            System.out.println("NNNN");
+        }
+
     }
 
     /**
