@@ -1,12 +1,12 @@
 package application.fichiers;
 
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.time.LocalDate;
 
+import application.chaines.ChProduction;
+import application.elements.Element;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
@@ -59,7 +59,35 @@ public class CSVV {
 		
 		return printer;
 	}
-	
+
+
+	static void ecriture(File f, Element e) throws IOException{
+		BufferedWriter writer = null;
+		try{
+			writer = new BufferedWriter(
+					new OutputStreamWriter(new FileOutputStream("chaines.csv"), "utf-8"));
+			writer.newLine();
+			writer.write(e.toString());
+		}catch (Exception ex){
+			ex.printStackTrace();
+		}finally{
+			writer.close();
+		}
+
+	}
+	static void ecriture(File f, ChProduction cp)throws IOException{
+		BufferedWriter writer = null;
+		try{
+			writer = new BufferedWriter(
+					new OutputStreamWriter(new FileOutputStream("chaines.csv"), "utf-8"));
+			writer.newLine();
+			writer.write(cp.toString());
+		}catch (Exception ex){
+			ex.printStackTrace();
+		}finally{
+			writer.close();
+		}
+	}
 //	public static void main(String[] args) {
 //	
 //		CSVV.lecture("elements.csv").forEach(csvRecord -> {

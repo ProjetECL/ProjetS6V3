@@ -16,14 +16,6 @@ public class Element {
    protected int prixAchat;
    protected int prixVente;
 
-   public Element() {
-	   this.code = null;
-	   this.quantite = 0;
-       this.nom = null;
-       this.unite = null;
-       this.prixAchat = 0;
-       this.prixVente = 0;
-   }
 
    public Element(String code, float quantite, String nom, String unite, int prixAchat, int prixVente) {
 	   

@@ -16,7 +16,7 @@ import java.util.function.Consumer;
  * @author lea
  */
 public class ChProduction {
-    private static final String TAG = "ChProduction";
+   // private static final String TAG = "ChProduction";
     private String code;
     private String nom;
     private List<AssociationChProdElement> entree = new ArrayList<AssociationChProdElement>();
@@ -38,9 +38,6 @@ public class ChProduction {
     }
 
 
-    public void addElementEntree(Element e) throws IOException {
-        //utiliser la partie CSV
-    }
 
     public int setNiveau(int n) {
         this.nivActivation = n;

@@ -22,7 +22,7 @@ import java.util.function.Consumer;
  */
 public class Calcul {
 
-    private List<ChProduction> chaines = ChProduction.csvVersChainesTest() ;
+    private List<ChProduction> chaines ;
     private HashMap<String,Element> elements;
 
     /**
@@ -99,18 +99,6 @@ public class Calcul {
         return efficacite;
     }
 
-    public static void main(String[] args){
-        try {
-            Calcul calcul = new Calcul();
-            calcul.chaines.get(0).setNiveau(0);
-            calcul.chaines.get(1).setNiveau(0);
-            calcul.chaines.get(2).setNiveau(0);
-            calcul.evaluer();
-        } catch (Exception e) {
-            System.out.println("NNNN");
-        }
-
-    }
 
     /**
      * @param liste de tous les �l�ments de la HashMap
